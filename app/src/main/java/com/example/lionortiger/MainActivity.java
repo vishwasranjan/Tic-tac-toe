@@ -1,10 +1,6 @@
 package com.example.lionortiger;
-
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.gridlayout.widget.GridLayout;
-
-import android.content.DialogInterface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -32,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         gridLayout=findViewById(R.id.gridlayout);
-        showalerttoplayer();
         winnersound=MediaPlayer.create(this,R.raw.winnersound);
         btnreset=findViewById(R.id.btnreset);
         gameover=false;
@@ -109,26 +104,5 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void showalerttoplayer()
-    {
-        final AlertDialog.Builder alert=new AlertDialog.Builder(this);
-        alert.setTitle("RULES");
-        alert.setMessage("Players alternately play and can place the symbol in any free field." +
-                " winner is the player who first" +
-                " manages to link its three symbols in a horizontal, vertical or diagonal row.");
-        alert.setPositiveButton("Ready", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-
-            }
-        });
-        alert.setNegativeButton("Exit", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-            System.exit(0);
-            }
-        });
-        alert.show();
-    }
 
 }
