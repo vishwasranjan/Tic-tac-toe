@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/tigerlionappicon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Rules"></activity>
+        <activity android:name=".Support"></activity>
+        <activity
+            android:name=".Menu_about"
+            android:label="@string/title_activity_menu_about"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Rules" />
         <activity android:name=".Front_activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +24,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
