@@ -5,6 +5,6 @@
         android:id="@+id/menu_about"
         android:title="About" />
     <item
-        android:id="@+id/menu_support"
-        android:title="Support" />
+        android:id="@+id/report"
+        android:title=" Report a problem" />
 </menu>

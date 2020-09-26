@@ -1,5 +1,6 @@
 package com.example.lionortiger;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.gridlayout.widget.GridLayout;
 
@@ -10,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         gridLayout=findViewById(R.id.gridlayout);
         winnersound=MediaPlayer.create(this,R.raw.winnersound);
@@ -125,9 +128,9 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent=new Intent(MainActivity.this,Menu_about.class);
                 startActivity(intent);
                 break;
-            case R.id.menu_support:
-                Intent intent2=new Intent(MainActivity.this,Support.class);
-                startActivity(intent2);
+            case R.id.report:
+                Intent intent1=new Intent(MainActivity.this,report.class);
+                startActivity(intent1);
                 break;
         }
         return true;
