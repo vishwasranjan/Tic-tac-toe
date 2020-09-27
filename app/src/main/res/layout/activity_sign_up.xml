@@ -8,31 +8,32 @@
     tools:context=".SignUp">
 
     <EditText
-        android:id="@+id/edtUsernameSignup"
+        android:id="@+id/edtEmailSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:gravity="center"
-        android:hint="Enter Username"
-        android:inputType="textPersonName"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"
         android:textColorHint="#062DF1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline6" />
 
     <EditText
-        android:id="@+id/edtEmailSignup"
+        android:id="@+id/edtUsernameSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:ems="10"
         android:gravity="center"
-        android:hint="Enter Email"
-        android:inputType="textEmailAddress"
+        android:hint="Enter Username"
+        android:inputType="textPersonName"
         android:textColorHint="#062DF1"
-        app:layout_constraintEnd_toEndOf="@+id/edtUsernameSignup"
-        app:layout_constraintStart_toStartOf="@+id/edtUsernameSignup"
-        app:layout_constraintTop_toBottomOf="@+id/edtUsernameSignup" />
+        app:layout_constraintEnd_toEndOf="@+id/edtEmailSignup"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/edtEmailSignup"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmailSignup" />
 
     <EditText
         android:id="@+id/edtPasswordSignup"
@@ -45,8 +46,9 @@
         android:inputType="textPassword"
         android:textColorHint="#062DF1"
         app:layout_constraintEnd_toEndOf="@+id/edtEmailSignup"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/edtEmailSignup"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmailSignup" />
+        app:layout_constraintTop_toBottomOf="@+id/edtUsernameSignup" />
 
     <Button
         android:id="@+id/btnSignup"

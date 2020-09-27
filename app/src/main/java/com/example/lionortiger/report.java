@@ -64,6 +64,7 @@ public class report extends AppCompatActivity implements View.OnClickListener {
 
                     } else {
                         Toast.makeText(report.this, "Something Went wrong...Please try again", Toast.LENGTH_SHORT).show();
+                        progressDialog.dismiss();
                     }
                 }
             });

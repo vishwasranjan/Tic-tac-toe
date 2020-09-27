@@ -56,6 +56,13 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         parseUser.setEmail(edtEmail.getText().toString());
         parseUser.setUsername(edtUsernameSignup.getText().toString());
         parseUser.setPassword(edtPasswordSignup.getText().toString());
+        if (edtEmail.getText().equals("")||edtUsernameSignup.getText().equals("")||edtPasswordSignup.getText().equals(""))
+        {
+            progressDialog.dismiss();
+            Toast.makeText(SignUp.this,"All are required",Toast.LENGTH_SHORT).show();
+        }
+        else {
+
             parseUser.signUpInBackground(new SignUpCallback() {
                 @Override
                 public void done(ParseException e) {
@@ -67,8 +74,10 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
                         startActivity(intent);
                     } else {
                         Toast.makeText(SignUp.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                        progressDialog.dismiss();
                     }
                 }
             });
+        }
     }
 }

@@ -47,6 +47,7 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
                 }
                 else {
                     Toast.makeText(LogIn.this,e.getMessage(),Toast.LENGTH_SHORT).show();
+                    progressDialog.dismiss();
                 }
             }
         });
